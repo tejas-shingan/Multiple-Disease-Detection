@@ -161,7 +161,7 @@ elif selected_disease == "Diabetes":
 
     # Prediction and Output
     diab_diagnosis = ""
-    with open("Pickle/diabetes_model_k.pkl", "rb") as model_file:
+    with open("Models/diabetes_model_k.pkl", "rb") as model_file:
         diabetes_model = pickle.load(model_file)
     if st.button("Predict"):
 
@@ -320,7 +320,7 @@ elif selected_disease == "Heart Disease":
 
     # Prediction and Output
     heart_diagnosis = ""
-    with open("Pickle\heart_rf_model.pkl", "rb") as model_file:
+    with open("Models/heart_rf_model.pkl", "rb") as model_file:
         heart_model = pickle.load(model_file)
 
     if st.button("Predict"):
@@ -404,7 +404,7 @@ elif selected_disease == "Heart Disease":
 elif selected_disease == "Lung Cancer":
 
     # Load the trained model
-    loaded_model = load_model("Pickle\lung_cancer_model.h5")
+    loaded_model = load_model("Models/lung_cancer_model.h5")
 
     # Function to preprocess the user-uploaded image
     def preprocess_image(image):
